@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "truffle-config.js",
-  "repository": "https://github.com/graphprotocol/astraToken-subgraph",
+  "repository": "https://github.com/AstraProtocol/astraToken-subgraph",
   "directories": {
     "test": "test"
   },
