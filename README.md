@@ -1,4 +1,4 @@
-# Example Subgraph Test on Ganache
+# Example Subgraph Test on Ganache OR Astra Chain
 
 > Before executing test: ../test/myToken.test.forgraph.js
 

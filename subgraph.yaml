@@ -1,0 +1,28 @@
+specVersion: 0.0.2
+description: MyToken for ASTRA
+repository: https://github.com/graphprotocol/example-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: MyToken
+    network: astra
+    source:
+      address: '0xCb5eca9F4fceDE1f6b8c2DF3b09d0728FBe36b16'
+      abi: MyToken
+      startBlock: 237928
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - MyToken
+      abis:
+        - name: MyToken
+          file: ./build/contracts/MyToken.json
+      eventHandlers:
+        - event: NewToken(uint256,address,uint256)
+          handler: handleNewToken
+        - event: UpdatedToken(uint256,address,uint256)
+          handler: handleUpdatedToken
+      file: ./src/mapping.ts
